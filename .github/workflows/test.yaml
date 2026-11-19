@@ -16,11 +16,9 @@ jobs:
       fail-fast: false
       matrix:
         service:
-          
-          # FILL IN (A3.1): the list: one item per service, the folder of each of the three services (look under services/)
           - services/python/grades-api
-          - services/node/...  
-          - services/go/...    
+          - services/python/grades-report
+          - services/web/grades-web
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: ./.github/actions/setup-service
